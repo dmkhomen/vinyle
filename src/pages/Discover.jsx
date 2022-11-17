@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Error, Loader, SongCard } from "../components";
 import { genres } from "../assets/constants";
 
+import { selectGenreListId } from "../redux/features/playerSlice";
 import { useGetTopChartsQuery } from "../redux/services/shazamCore";
 
 const Discover = () => {
@@ -27,7 +28,7 @@ const Discover = () => {
           Discover {genreTitle}
         </h2>
         <select
-          onChange={() => {}}
+          onChange={(e) => dispatch(selectGenreListId)}
           value=""
           className="bg-black text-gray-300 p-4 text-sm rounded-lg outline-none sm:mt-0 mt-5"
         >

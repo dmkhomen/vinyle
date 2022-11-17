@@ -1,12 +1,12 @@
 import SongBar from "./SongBar";
 
-const RelatedSongs = (
+const RelatedSongs = ({
   data,
   isPlaying,
   activeSong,
   handlePauseClick,
   handlePlayClick,
-) => {
+}) => {
   // console.log(data);
   // console.log(Array.from(data));
   // console.log("type of ", typeof data);

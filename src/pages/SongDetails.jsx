@@ -63,14 +63,14 @@ const SongDetails = () => {
         </div>
       </div>
 
-      {/* <RelatedSongs
+      <RelatedSongs
         data={data}
         artistId={artistId}
         isPlaying={isPlaying}
         activeSong={activeSong}
         handlePauseClick={handlePauseClick}
         handlePlayClick={handlePlayClick}
-      /> */}
+      />
     </div>
   );
 };
