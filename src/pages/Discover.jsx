@@ -16,6 +16,10 @@ const Discover = () => {
 
   if (error) return <Error />;
 
+  // console.log("main page data", data);
+  // console.log("main type of ", typeof data);
+  // console.log("main array is array: ", Array.isArray(data));
+
   return (
     <div className="flex flex-col">
       <div className="w-full flex justify-between items-center sm:flex-row flex-col mt-4 mb-10">

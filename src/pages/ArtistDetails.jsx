@@ -1,3 +1,4 @@
+import React from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { DetailsHeader, Error, Loader, RelatedSongs } from "../components";
@@ -13,7 +14,8 @@ const ArtistDetails = () => {
     error,
   } = useGetArtistDetailsQuery(artistId);
 
-  if (isFetchingArtistDetails) return <Loader title="Loading artist details" />;
+  if (isFetchingArtistDetails)
+    return <Loader title="Loading artist details..." />;
 
   if (error) return <Error />;
 
@@ -21,12 +23,12 @@ const ArtistDetails = () => {
     <div className="flex flex-col">
       <DetailsHeader artistId={artistId} artistData={artistData} />
 
-      <RelatedSongs
+      {/* <RelatedSongs
         data={Object.values(artistData?.songs)}
         artistId={artistId}
         isPlaying={isPlaying}
         activeSong={activeSong}
-      />
+      /> */}
     </div>
   );
 };
