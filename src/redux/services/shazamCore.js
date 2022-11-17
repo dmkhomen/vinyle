@@ -36,7 +36,7 @@ export const shazamCoreApi = createApi({
     }),
     getSongsBySearch: builder.query({
       query: (searchTerm) =>
-        `/search/multi?search_type=SONGS_ARTISTS&query${searchTerm}`,
+        `/search/multi?search_type=SONGS_ARTISTS&query=${searchTerm}`,
     }),
   }),
 });
